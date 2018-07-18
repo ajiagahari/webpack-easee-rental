@@ -1,6 +1,7 @@
-# Webpack Boilerplate
+# webpack-easee-rental
+use Webpack Boilerplate
 
-A webpack boilerplate that includes the following libs:
+use libs:
 
 * jQuery
 * bootstrap
@@ -10,11 +11,6 @@ A webpack boilerplate that includes the following libs:
 * animate.css
 
 in order to quickly build up a production-ready marketing website.
-
-### Example Page
-[DEMO](http://geniuscarrier.com/demo/webpack-boilerplate/)
-
-![GIF](http://geniuscarrier.me/images/webpack-boilerplate.gif)
 
 ### Install dependencies
 
