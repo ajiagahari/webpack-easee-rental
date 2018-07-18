@@ -1,5 +1,5 @@
 # webpack-easee-rental
-use Webpack Boilerplate
+use Webpack Boilerplate by https://github.com/geniuscarrier
 
 use libs:
 
