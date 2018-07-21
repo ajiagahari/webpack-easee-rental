@@ -31,10 +31,14 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "express": "^4.9.8",
     "bootstrap": "^3.3.6",
     "bootstrap-daterangepicker": "^2.1.25",
     "font-awesome": "^4.5.0",
     "jquery": "^2.2.2",
     "jquery.scrollto": "^2.1.2"
+  },
+  "engines": {
+    "node": "4.1.1"
   }
 }
