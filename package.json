@@ -39,6 +39,6 @@
     "jquery.scrollto": "^2.1.2"
   },
   "engines": {
-    "node": "4.1.1"
+    "node": "4.7.0"
   }
 }
