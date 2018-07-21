@@ -1,0 +1,231 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../node_modules/animate.css/animate.min.css";
+@import '../node_modules/bootstrap-daterangepicker/daterangepicker.css';
+@import "color";
+@import "carousel";
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* EXAMPLE CSS STARTS */
+body {
+    font-family: 'Montserrat', cursive;
+    font-style: normal;
+}
+.text-yellow, .text-yellow:hover{
+    color: #FAD10D;
+}
+.premiumIcon{
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url("../images/premium.png");
+}
+.navbar-brand>img {
+    height: stretch;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+.btn-pesan{
+    background-color: #FAD10D;
+    border-color: #FAD10D;
+    color: black;
+}
+
+.navbar-inverse {
+    background-color: #FAD10D;
+    border-color: #FAD10D;
+    color: white;
+}
+.transparent {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+
+#testimoni {
+    padding-top: 60px;
+    .col-lg-4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    h2 {
+        font-weight: normal;
+    }
+    .col-lg-4 p {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.featurette-divider {
+    margin: 80px 0;
+}
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+#contact-us .jumbotron {
+    background-color: #ffffff;
+    p {
+        &:not(:first-of-type) {
+            font-size: 18px;
+        }
+    }
+}
+
+.inline {
+    display: inline-block;
+}
+
+.footer {
+    padding: 40px 40px;
+    text-align: left;
+    background-color: #FAD10D;
+    color: black;
+    border-top: 1px solid #e7e7e7;
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 400px) {
+    .headText {
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    .headMargin {
+        font-size: 1.8rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    .divMargin{
+        margin-top: 3rem;
+    }
+    .caption{
+        font-size: 0.6rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 0.8rem;
+    }
+    p {
+        font-size: 0.6rem;
+    }
+    .thumbnail>img {
+        height: 60px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+    .headText {
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    .headMargin {
+        font-size: 2rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    .divMargin{
+        margin-top: 3rem;
+    }
+    .caption{
+        font-size: 0.8rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.8rem;
+    }
+    .thumbnail>img {
+        height: 70px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .headText {
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
+    .headMargin {
+        font-size: 3rem;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+    .divMargin{
+        margin-top: 3rem;
+    }
+    .caption{
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
+    .thumbnail>img {
+        height: 80px;
+    }
+}
+
+@media (min-width: 992px){
+    .headText {
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
+    .headMargin {
+        font-size: 3rem;
+        margin-top: 8rem;
+        margin-bottom: 8rem;
+    }
+    .divMargin {
+        margin-top: 3rem;
+    }
+    .caption {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.6rem;
+    }
+    .thumbnail>img {
+        height: 100px;
+    }
+}
+
+/* EXAMPLE CSS ENDS */
