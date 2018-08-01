@@ -4,6 +4,8 @@ import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import 'waypoints';
 import 'scrollTo';
 import 'bootstrap-daterangepicker';
+
+import { initHome, initDocument, checkRoute } from './pageElement.js'
 /**
  * EXAMPLE JS STARTS
  */
@@ -29,23 +31,13 @@ $(function() {
         triggerOnce: true
     });
     $(document).ready(function(){
-        $(window).scroll(function(){
-            var scroll = $(window).scrollTop();
-                if (scroll > 0) {
-                    $(".navbar").removeClass("transparent");
-                }
-                else{
-                    $(".navbar").addClass("transparent");
-                }
-                if (scroll > 200) {
-                    $(".navbar").addClass("bg-primary");
-                }
-
-                else{
-                    $(".navbar").removeClass("bg-primary");   
-                }
-        })
-    })
+        initDocument();
+        initHome();
+        checkRoute();
+        window.addEventListener('hashchange', function() {
+            checkRoute();
+        });
+    });
 });
 /**
  * EXAMPLE JS ENDS

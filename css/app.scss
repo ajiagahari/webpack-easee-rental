@@ -4,16 +4,38 @@
 @import '../node_modules/bootstrap-daterangepicker/daterangepicker.css';
 @import "color";
 @import "carousel";
-@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import './signPainter.css';
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-/* EXAMPLE CSS STARTS */
+/* Font CSS */
 body {
     font-family: 'Montserrat', cursive;
     font-style: normal;
 }
+h1 {
+    font-family: 'Sign Painter', cursive;
+    font-style: normal;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color : #333;
+}
 .text-yellow, .text-yellow:hover{
     color: #FAD10D;
+}
+/* Image CSS */
+.carousel-inner > .item > .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+.btn {
+    border-radius: 0px;
+}
+.img {
+    background-image: url("../images/welcome.png");
+    background-size:cover;
 }
 .premiumIcon{
     width: 20px;
@@ -22,10 +44,28 @@ body {
     display: inline-block;
     background-image: url("../images/premium.png");
 }
-.navbar-brand>img {
-    height: stretch;
+.instagramIcon{
+    position : relative;
+    width: 20px;
+    height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url("../images/instagram.png");
 }
-
+.phoneIcon{
+    width: 60px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-image: url("../images/phone.png");
+}
+.navbar {
+    
+}
+.navbar-brand {
+    margin-top: -1.1rem;
+}
+/* DIV CSS */
 .jumbotron {
     margin-bottom: 0;
 }
@@ -95,6 +135,7 @@ body {
 }
 
 .footer {
+    margin-top: 70px;
     padding: 40px 40px;
     text-align: left;
     background-color: #FAD10D;
@@ -116,10 +157,16 @@ body {
         margin-bottom: 4rem;
     }
     .divMargin{
-        margin-top: 3rem;
+        margin-top: 7rem;
     }
     .caption{
         font-size: 0.6rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 2rem;   
     }
     h3 {
         font-size: 1rem;
@@ -131,7 +178,11 @@ body {
         font-size: 0.6rem;
     }
     .thumbnail>img {
-        height: 60px;
+        height: 70px;
+    }
+    .well {
+        max-width : 70%;
+        border-color: #FAD10D;
     }
 }
 
@@ -147,10 +198,16 @@ body {
         margin-bottom: 5rem;
     }
     .divMargin{
-        margin-top: 3rem;
+        margin-top: 7rem;
     }
     .caption{
         font-size: 0.8rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 2rem;
     }
     h3 {
         font-size: 1.2rem;
@@ -162,7 +219,11 @@ body {
         font-size: 0.8rem;
     }
     .thumbnail>img {
-        height: 70px;
+        height: 90px;
+    }
+    .well {
+        max-width : 70%;
+        border-color: #FAD10D;
     }
 }
 
@@ -178,10 +239,16 @@ body {
         margin-bottom: 6rem;
     }
     .divMargin{
-        margin-top: 3rem;
+        margin-top: 7rem;
     }
     .caption{
         font-size: 1rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 3rem;
     }
     h3 {
         font-size: 1.8rem;
@@ -193,7 +260,11 @@ body {
         font-size: 1.3rem;
     }
     .thumbnail>img {
-        height: 80px;
+        height: 120px;
+    }
+    .well {
+        max-width : 50%;
+        border-color: #FAD10D;
     }
 }
 
@@ -209,10 +280,16 @@ body {
         margin-bottom: 8rem;
     }
     .divMargin {
-        margin-top: 3rem;
+        margin-top: 7rem;
     }
     .caption {
         font-size: 1rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 3rem;
     }
     h3 {
         font-size: 2rem;
@@ -224,8 +301,12 @@ body {
         font-size: 1.6rem;
     }
     .thumbnail>img {
-        height: 100px;
+        height: 140px;
+    }
+    .well {
+        max-width : 30%;
+        border-color: #FAD10D;
     }
 }
 
-/* EXAMPLE CSS ENDS */
+/* CSS ENDS */
