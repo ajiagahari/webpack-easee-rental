@@ -41,6 +41,12 @@ const initListMobil = (mobilArray,div)  => {
 	})
 }
 
+const initOptionMobil = (mobilArray,div) => {
+	$.each(mobilArray, (index) => {
+		const input = (`<option value="${mobilArray[index].name}">${mobilArray[index].name}</option>`);
+		$(`#${div}`).append(input);
+	})
+}
 // render Home Page
 const initHome = () => {
 	initListMobil(listMobil,'listMobil');
@@ -49,50 +55,38 @@ const initHome = () => {
 	$('.navbar').off('show.bs.collapse').on('show.bs.collapse', function(e) {
 		$('.navbar').removeClass('transparent');
 	});
+
+	initOptionMobil(landingMobil.concat(premiumMobil),'pilihMobil');
 }
 
-// CORS 
-function createCORSRequest(method, url) {
-  var xhr = new XMLHttpRequest();
-  if ("withCredentials" in xhr) {
 
-    // Check if the XMLHttpRequest object has a "withCredentials" property.
-    // "withCredentials" only exists on XMLHTTPRequest2 objects.
-    xhr.open(method, url, true);
-
-  } else if (typeof XDomainRequest != "undefined") {
-
-    // Otherwise, check if XDomainRequest.
-    // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-    xhr = new XDomainRequest();
-    xhr.open(method, url);
-
-  } else {
-
-    // Otherwise, CORS is not supported by the browser.
-    xhr = null;
-
-  }
-  return xhr;
-}
 
 const initSubmit = () => {
 	$('#formReservasi').off('submit').on('submit',(e) => {
 		// set form data
 		const submitedData = $('#formReservasi input');
-		const formData = new FormData();
+		let jsonData = new Object();
 		$.each(submitedData,(index) => {
 			if(submitedData[index].name){
-				formData.append(submitedData[index].name,submitedData[index].value);
+				jsonData[`${submitedData[index].name}`] = submitedData[index].value;
 			}
 		});
+		const selectedData = $('#formReservasi select');
+		$.each(selectedData,(index) => {
+			if(selectedData[index].name){
+				jsonData[`${selectedData[index].name}`] = selectedData[index].value;
+			}
+		});
+		const jsonString= JSON.stringify(jsonData);
 		$.ajax({
 	        url: 'https://easee-be.herokuapp.com/web/form',
-	        data: formData,
+	        data: jsonString,
 	        processData: false,
+	        cache: false,
+		    contentType: "application/json",
 	        type: 'POST',
-	        success: function ( data ) {
-	            alert( data );
+	        success: function ( {status,message} ) {
+	            alert( message );
 	        },
 	        error: function (e) {
 	        	alert('maaf server sedang sibuk');
@@ -132,7 +126,7 @@ const checkRoute = () => {
 	        $('#sewa_mobil').show()
 	        $('#testimoni').hide()
 	        $('#help').hide()
-	        initListMobil(listMobil,'listMobilAll');
+	        initListMobil(landingMobil,'listMobilAll');
 	        initListMobil(premiumMobil,'listMobilPremium');
 	        window.scrollTo(0, 0);
 	        break;
