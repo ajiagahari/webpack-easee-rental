@@ -158,6 +158,9 @@ const checkRoute = () => {
 	        $('#help').hide()
 	        window.scrollTo(0, 0);
 	        break;
+	    case '#syarat' :
+	    	console.log('masuk syarat');
+	    	break;
 	    default:
 	    	// home
 	    	$('#mobil').show()
